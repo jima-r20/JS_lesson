@@ -128,5 +128,106 @@
     console.log(Math.round(avg));   // 四捨五入
     console.log(avg.toFixed(3));    // 小数点以下3桁まで表示
 
-    console.log(Math.random()); // 0から1の範囲でランダム
+    console.log(Math.random()); // 0以上1未満の範囲でランダム
+    
+    // サイコロの実装 Math.floor()：整数値で表現
+    console.log(Math.floor(Math.random() * 6) + 1);
+
+}
+
+{
+    // 日時
+    const d = new Date();
+    console.log(d);
+    console.log(`${d.getMonth() + 1}月 ${d.getDate()}日`);
+
+    const date = new Date(2020, 3); // 2020/04/01 00:00:00
+    console.log(date);  
+    date.setHours(10, 20, 30);  // 2020/04/01 10:20:30
+    date.setDate(date.getDate() + 3);   // 2020/04/04 10:20:30
+    console.log(date);
+}
+
+{
+    // ダイアログ表示
+    alert("hello");
+
+    const answer = confirm("削除しますか？");
+    if(answer){
+        alert("削除しました");
+    }else{
+        console.log("キャンセルしました");
+    }
+}
+
+{
+    let i = 0;
+
+    function showTime(){
+        console.log(new Date());        
+        const timeoutId = setTimeout(showTime, 1000);
+        i++;
+        if(i > 2){
+            clearTimeout(timeoutId);  // 3回時刻を表示したら止める
+        }
+    }
+    showTime();
+}
+
+{
+    const name1 = "ryuji";
+    const name2 = 420;
+    try{
+        console.log(name1.toUpperCase());
+        console.log(name2.toUpperCase());       
+    }catch(e){
+        console.log("エラーが発生しました");
+    }
+    console.log("Finish");
+}
+
+{
+    // クラスとインスタンス
+    class Post {    // 親クラス
+        constructor(text){
+            this.text = text;
+            this.likeCount = 0;
+        }
+        show(){
+            console.log(`${this.text} - ${this.likeCount}いいね`);
+        }
+        like(){
+            this.likeCount ++;
+            this.show();
+        }
+
+        // 静的メソッド
+        // thisは使えない
+        static showInfo(){
+            console.log("Information");
+        }
+    }
+
+    // クラスの継承
+    class SponsoredPost extends Post {  //子クラス
+        constructor(text, sponsor){
+            super(text);
+            this.sponsor = sponsor;
+        }
+        show(){
+            super.show();
+            console.log(`...sponsored by ${this.sponsor}`);
+        }
+    }
+
+    const posts = [
+        new Post("hoge"),
+        new Post("baz"),
+        new SponsoredPost("bar", "SPON"),
+    ];
+
+    Post.showInfo();
+    posts[2].show();
+    posts[0].like();
+    
 }
