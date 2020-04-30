@@ -3,9 +3,94 @@
 <head>
     <meta charset="utf-8">
     <title>JavaScript Basics</title>
+    <style>
+        .my-color{
+            color: red;
+            background-color: skyblue;
+        }
+
+        .my-border{
+            border-bottom: 4px solid orange;
+        }
+        .todo {
+            cursor: pointer;
+        }
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
+    <button id = "btn1">Run</button>
+    <h1 id = "target1" title = "見出しです" class = "my-border">ドットインストール</h1>
+    <button id = "btn2">RunRun</button>
+    <h1 id = "target2" data-translation = 'Dotinstall'>ドットインストール</h1>
+    <button id = "btn3">Add List</button>
+    <ul id = "list1">
+        <li>item 0</li>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    <button id = "btn4">Copy List</button>
+    <ul id = "list2">
+        <li>item 0</li>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    <button id = "btn5">Remove List</button>
+    <ul id = "list3">
+        <li>item 0</li>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
 
+    <input type = "text">
+    <button id = "btn6">Add</button>
+    <ul id = "input-item"></ul>
+    
+    <select>
+        <option value = "red">あか</option>
+        <option value = "blue">あお</option>
+        <option value = "yellow">きいろ</option>
+    </select>
+    <button id = "btn7">AddAdd</button>
+    <ul id = "select-item"></ul>
+    
+    <div id = "radio">
+        <input type = "radio" name = "color" value = "white">しろ
+        <input type = "radio" name = "color" value = "gray">グレー
+        <input type = "radio" name = "color" value = "black">くろ
+        <button id = "btn8">AddAddAdd</button>
+        <ul id = "radio-item"></ul>
+    </div>
+    <div id = "checkbox">
+        <input type = "checkbox" name = "color" value = "green">みどり
+        <input type = "checkbox" name = "color" value = "orange">オレンジ
+        <input type = "checkbox" name = "color" value = "pink">ピンク
+        <button id = "btn9">AddAddAddAdd</button>
+        <ul id = "checkbox-item"></ul>
+    </div>
+
+    <button id = "btn10">Double click</button>
+    <button id = "btn11">Mouse Move ON</button>
+    <button id = "btn12">Key Down ON</button>
+
+    <textarea></textarea>
+
+    <form>
+        <input type = "text">
+        <button id = "btn13">Submit</button>
+    </form>
+
+    <ul id = "todo">
+        <li>Todo1</li>
+        <li>Todo2</li>
+        <li>Todo3</li>
+    </ul>
+
+    <!-- jaファイルを選択 -->
+    <script src="2-1.js"></script>
     <script src="2-2.js"></script>
+    <script src="2-3.js"></script>
 </body>
 </html>

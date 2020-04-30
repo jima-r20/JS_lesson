@@ -1,4 +1,5 @@
 'use strict'; //エラーチェック用
+alert('スクリプト「2-1.js」を読み込みます\n「2-1.js」はコンソールで動作を確認してみてください');
 
 // 出力 console.log
 console.log("Hello\n\tWorld");
