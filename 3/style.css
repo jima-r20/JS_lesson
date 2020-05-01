@@ -1,0 +1,39 @@
+body {
+    background: #efefef;
+}
+
+.btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 30px auto;
+    text-align: center;
+    line-height: 200px;
+    color: white;
+    font-weight: bold;
+    font-size: 42px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+.btn:active {
+    margin-top: 35px;   
+}
+
+.version1 {
+    background: red;
+    box-shadow: 0 10px 0 #d1483e;   
+}
+.version1:active {
+    box-shadow: 0 5px 0 #d1483e;   
+}
+.version2 {
+    background: blue;
+    box-shadow: 0 10px 0 #495dd3;
+}
+.version2:active {
+    box-shadow: 0 5px 0 #495dd3;   
+}
